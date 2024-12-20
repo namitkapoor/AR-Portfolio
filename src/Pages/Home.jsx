@@ -1,12 +1,11 @@
 // HomePage.jsx
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import Experience from '../components/Experience.jsx';
 import HeroModel from '../components/HeroModel.jsx';
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom';
-import Content from '../components/Content.jsx';
 import Navbar from "../components/Navbar.jsx";
 import "../style/home.css";
 
@@ -39,7 +38,7 @@ export default function Home() {
             fov: 45,
             near: 0.1,
             far: 2000,
-            position: [0, 0, 2]
+            position: [0, 0, 50]
           }}
         >
           <Experience />
@@ -47,7 +46,7 @@ export default function Home() {
       </section>
 
        {/* Case Studies Section */}
-       <section className="case-studies">
+       {/* <section className="case-studies">
         <h2>Case Studies</h2>
         <div className="toggle-container">
           <button 
@@ -123,10 +122,10 @@ export default function Home() {
             </motion.div>
           </div>
         )}
-      </section>
+      </section> */}
 
       {/* Extra Work Section */}
-      <section className="extra-work">
+      {/* <section className="extra-work">
         <h2>Experiments</h2>
         <div className="work-grid">
           <motion.div 
@@ -137,7 +136,7 @@ export default function Home() {
             <p>Brief description</p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section className="contact">

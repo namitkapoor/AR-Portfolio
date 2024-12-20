@@ -10,7 +10,7 @@ export default function Experience()
     const htmlRotation = useControls('htmlRef', {rotation:[-0.5410000000000004,-0.046999999999999986,0]})
     const wandaTextRotation = useControls('wandaText', {rotation: [0, 0, 0]})
     const wandaTextPosition = useControls('wandaText', {position: [0, 0, 0]})
-
+    const shadowRotation = useControls('shadow', {rotation: [0, 0, 0]}) 
 
     return <>
 
@@ -21,6 +21,6 @@ export default function Experience()
         <color args={['#1a1a1a']} attach = "background"/>
         {/* <OrbitControls makeDefault /> */}
         <Model/>       
-        <ContactShadows position-y={-1.5} blur={1.5}/>
+        <ContactShadows scale={10} className='shadow' rotation-z={Math.PI / 2} position-z={-2} position-y={-10} blur={5}/>
     </>
 }
